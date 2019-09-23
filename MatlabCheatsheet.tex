@@ -9,8 +9,8 @@
     \fullwidthheader{MATLAB\,\,CHEAT\,\,SHEET}
 
     \begin{center}
-        \vspace*{0.5cm}
-        {\Large\bfseries Throughout this document $x$ and $y$ will be either row or column vectors and $A$ will always be a matrix.}
+        % \vspace*{0.5cm}
+        {\Large\bfseries Throughout this document \(x\) and \(y\) will be either row or column vectors and \(A\) will always be a matrix.}
     \end{center}
 
     \begin{multicols}{2}
@@ -30,39 +30,19 @@
             \texttt{format short} & Display 4 decimal places\\
             \texttt{format long} & Display 15 decimal places\\
             \texttt{edit filename} & Opens filename in editor \\
-            \texttt{disp('text')} & Print text\\ \chline{Header}
+            \texttt{disp('text')} & Print text\\ %\chline{Header}
         \end{fancytable}
 
-          \begin{fancytableM}{Keyboard Shortcuts}
-            F1 & F1 & docs for highlighted function \\
-            F5 & \cmd + R & Run code \\
-            F9 & \cmd  + \return & Run selected code \\
-            F11 & F11 & Run code line, enter functions \\
-            Shift + F5 & Shift + F5 & Leave debugger \\
-            F12 & \cmd  + \textbackslash & Insert break point \\
-            Ctrl + Pg Up/Down & Ctrl + Fn + up/down & Moves between tabs \\
-            Ctrl + shift & Ctrl + shift & Moves between components \\
-            Ctrl + C & Ctrl + C & Interrupts code \\
-            Ctrl + D & Shift +\cmd + D & Open highlighted codes file \\
-            Ctrl + R/T & \cmd + /  \cmd + T & Comment/uncomment \\
-            Ctrl + N & Ctrl + N & New script \\
-            Ctrl + W & Ctrl + W & Close script \\
-            Ctrl + shift + d & Ctrl + shift + d & Docks window \\
-            Ctrl + shift + u & Ctrl + shift + u & Undocks window \\
-            Ctrl + shift + m & Ctrl + shift + m & max window \\ \chline{Header}
-          \end{fancytableM}
         % -------------------------------------------------------
         % Defining/Changing Variables
         % -------------------------------------------------------
         \begin{fancytable}{Defining and Changing Variables}
-            \texttt{a = 3} & Define variable $a$ to be $3$\\
-            \texttt{x = [1, 2, 3]} & Set $x$ to be the row vector $[1, 2, 3]$\\
-            \texttt{x = [1; 2; 3]} & Set $x$ to be the column vector $[1, 2, 3]^T$\\
-            \texttt{A = [1, 2, 3, 4;} & Set $A$ to be a $3 \times 4$ matrix \\
-            \rowcolor{row1!75}\qquad\,\,\,\texttt{5, 6, 7, 8;} & \\
-            \qquad\,\,\,\texttt{9, 10, 11, 12]} & \\
-            \texttt{x(2) = 7} & Change $x$ from $[1, 2, 3]$ to $[1, 7, 3]$\\
-            \texttt{A(2,1) = 0} & Change $A_{2,1}$ from $5$ to $0$ \\ \chline{Header}
+            \texttt{a = 3} & Define variable a to be 3\\
+            \texttt{x = [1, 2, 3]} & Set \(x\) to be the row vector $[1, 2, 3]$\\
+            \texttt{x = [1; 2; 3]} & Set \(x\) to be the column vector $[1, 2, 3]^T$\\
+            \texttt{A = [1, 2; 3, 4]} & Set \(A\) to be a $2 \times 2$ matrix \\
+            \texttt{x(2) = 7} & Change \(x\) from $[1, 2, 3]$ to $[1, 7, 3]$\\
+            \texttt{A(2,1) = 0} & Change $A_{2,1}$ from \(5\) to \(0\) \\ \chline{Header}
         \end{fancytable}
 
         % -------------------------------------------------------
@@ -70,7 +50,7 @@
         % -------------------------------------------------------
         \begin{fancytable}{Basic Arithmetic and Functions}
             \texttt{3*4}, \texttt{7+4}, \texttt{2-6}, \texttt{8/3} & multiply, add, subtract and divide\\
-            \verb + 3^7 + & Compute $3^7$\\
+            \texttt{3\textrm7} & Compute $3^7$\\
             \texttt{sqrt(5)} & Compute $\sqrt{5}$\\
             \texttt{log(3)} & Compute $\ln(3)$\\
             \texttt{log10(100)} & Compute $\log_{10}(100)$\\
@@ -78,6 +58,7 @@
             \texttt{sin(5*pi/3)} & Compute $\sin(5\pi/3)$\\
             \texttt{floor(3.8)} & Compute $\left \lfloor 3.8 \right \rfloor$\\ \chline{Header}
         \end{fancytable}
+
 
         % -------------------------------------------------------
         % Constructing Matrices/Vectors
@@ -96,47 +77,65 @@
         % Operations on Matrices/Vectors
         % -------------------------------------------------------
         \begin{fancytable}{Operations on Matrices and Vectors}
-            \texttt{3 * x} & Multiply every element of $x$ by $3$\\
-            \texttt{x + 2} & Add $2$ to every element of $x$\\
-            \texttt{x + y} & Element-wise addition of two vectors $x$ and $y$\\
+            \texttt{3 * x} & Multiply every element of \(x\) by \(3\)\\
+            \texttt{x + 2} & Add \(2\) to every element of \(x\)\\
+            \texttt{x + y} & Element-wise addition of two vectors \(x\) and \(y\)\\
             \texttt{A * y} & Product of a matrix and vector\\
             \texttt{A * B} & Product of two matrices\\
             \texttt{A .* B} & Element-wise product of two matrices\\
-            \verb + A ^ 3 + & Square matrix $A$ to the third power\\
-            \verb + A .^ 3+ & Every element of $A$ to the third power\\
-            \texttt{cos(A)} & Compute the cosine of every element of $A$\\
-            \texttt{abs(A)} & Compute the absolute values of every element of $A$\\
-            \texttt{A'} & Transpose of $A$\\
-            \texttt{inv(A)} & Compute the inverse of $A$\\
-            \texttt{det(A)} & Compute the determinant of $A$\\
-            \texttt{eig(A)} & Compute the eigenvalues of $A$\\
-            \texttt{size(A)} & Get the size of $A$ \\ \chline{Header}
+            \verb + A ^ 3 + & Square matrix \(A\) to the third power\\
+            \verb + A .^ 3+ & Every element of \(A\) to the third power\\
+            \texttt{cos(A)} & Compute the cosine of every element of \(A\)\\
+            \texttt{abs(A)} & Compute the absolute values of every element of \(A\)\\
+            \texttt{A'} & Transpose of \(A\)\\
+            \texttt{inv(A)} & Compute the inverse of \(A\)\\
+            \texttt{det(A)} & Compute the determinant of \(A\)\\
+            \texttt{eig(A)} & Compute the eigenvalues of \(A\)\\
+            \texttt{size(A)} & Get the size of \(A\) \\ \chline{Header}
         \end{fancytable}
 
         % -------------------------------------------------------
         % Portions of Matrices/Vectors
         % -------------------------------------------------------
         \begin{fancytable}{Entries of Matrices and Vectors}
-            \texttt{x(2:12)} & The \nth{2} to the \nth{12} elements of $x$\\
-            \texttt{x(2:end)} & The \nth{2} to the last elements of $x$\\
-            \texttt{x(1:3:end)} & Every third element of $x$ from the first to last\\
-            \texttt{A(5,:)} & Get the \nth{5} row of $A$\\
-            \texttt{A(:,5)} & Get the \nth{5} column of $A$\\
+            \texttt{x(2:12)} & The \nth{2} to the \nth{12} elements of \(x\)\\
+            \texttt{x(2:end)} & The \nth{2} to the last elements of \(x\)\\
+            \texttt{x(1:3:end)} & Every third element of \(x\) from the first to last\\
+            \texttt{A(5,:)} & Get the \nth{5} row of \(A\)\\
+            \texttt{A(:,5)} & Get the \nth{5} column of \(A\)\\
             \texttt{A(5, 1:3)} & Get the first to third elements in the \nth{5} row\\ \chline{Header}
         \end{fancytable}
 
+        \begin{fancytableM}{Keyboard Shortcuts}
+          \texttt{F1} & \texttt{F1} & docs for highlighted function \\
+          F5 & \cmd + R & Run code \\
+          F9 & \cmd  + \return & Run selected code \\
+          F11 & F11 & Run code line, enter functions \\
+          Shift + F5 & Shift + F5 & Leave debugger \\
+          F12 & \cmd  + \textbackslash & Insert break point \\
+          Ctrl + Pg Up/Down & Ctrl + Fn + up/down & Moves between tabs \\
+          Ctrl + shift & Ctrl + shift & Moves between components \\
+          Ctrl + C & Ctrl + C & Interrupts code \\
+          Ctrl + D & Shift +\cmd + D & Open highlighted codes file \\
+          Ctrl + R/T & \cmd + /  \cmd + T & Comment/uncomment \\
+          Ctrl + N & Ctrl + N & New script \\
+          Ctrl + W & Ctrl + W & Close script \\
+          Ctrl + shift + d & Ctrl + shift + d & Docks window \\
+          Ctrl + shift + u & Ctrl + shift + u & Undocks window \\
+          Ctrl + shift + m & Ctrl + shift + m & max window \\ \chline{Header}
+        \end{fancytableM}
         % -------------------------------------------------------
         % Plotting
         % -------------------------------------------------------
         \begin{fancytable}{Plotting}
-            \texttt{plot(x,y)} & Plot $y$ versus $x$ (must be the same length)\\
-            \texttt{loglog(x,y)} & Plot $y$ versus $x$ on a log-log scale (both axes have a logarithmic scale)\\
-            \texttt{semilogx(x, y)} & Plot $y$ versus $x$ with $x$ on a log scale\\
-            \texttt{semilogy(x, y)} & Plot $y$ versus $x$ with $y$ on a log scale\\
-            \texttt{axis equal} & Force the $x$ and $y$ axes to be scaled equally\\
+            \texttt{plot(x,y)} & Plot \(y\) versus \(x\) (must be the same length)\\
+            \texttt{loglog(x,y)} & Plot \(y\) versus \(x\) on a log-log scale (both axes have a logarithmic scale)\\
+            \texttt{semilogx(x, y)} & Plot \(y\) versus \(x\) with \(x\) on a log scale\\
+            \texttt{semilogy(x, y)} & Plot \(y\) versus \(x\) with \(y\) on a log scale\\
+            \texttt{axis equal} & Force the \(x\) and \(y\) axes to be scaled equally\\
             \texttt{title('A Title')} & Add a title to the plot\\
-            \texttt{xlabel('x label')} & Add a label to the $x$ axis\\
-            \texttt{ylabel('y label')} & Add a label to the $y$ axis\\
+            \texttt{xlabel('x label')} & Add a label to the \(x\) axis\\
+            \texttt{ylabel('y label')} & Add a label to the \(y\) axis\\
             \texttt{legend('foo', 'bar')} & Label 2 curves for the plot\\
             \texttt{grid} & Add a grid to the plot\\
             \texttt{hold on} & Multiple plots on single figure\\
@@ -180,7 +179,7 @@
             \texttt{flip} & flip order of elements\\
             \texttt{reshape} & Reshape array\\
             \texttt{end} & Denotes last element\\
-            \texttt{size(A)} & Get the size of $A$ \\ \chline{Header}
+            \texttt{size(A)} & Get the size of \(A\) \\ \chline{Header}
         \end{fancytable}
 
         % -------------------------------------------------------
@@ -190,7 +189,7 @@
            \texttt{x = A\textbackslash b} & Solves \texttt{Ax = b}\\
            \texttt{x = linsolve(A,B)} & Solves \texttt{A*X = B}\\
            \texttt{[V,D] = eig(A,B)} & Diagonal matrix \texttt{D} of eigenvalues and matrix \texttt{V} whose columns are the corresponding right eigenvectors, so that \texttt{A*V = V*D}.\\
-           \texttt{[U,S,V] = svd(A)} & Singular value decomposition of matrix $A$, such that $A = U*S*V'$.\\
+           \texttt{[U,S,V] = svd(A)} & Singular value decomposition of matrix \(A\), such that $A = U*S*V'$.\\
            \texttt{inv} & Matrix inverse\\
            \texttt{realmin} & Smallest positive floating-point number $2.2251 \cdot 10^{-308}$\\ \chline{Header}
        \end{fancytable}

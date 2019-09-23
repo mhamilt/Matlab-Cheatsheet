@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/latex
 
+## macOS ##
+.DS_Store
+
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.aux
@@ -201,5 +204,5 @@ TSWLatexianTemp*
 # KBibTeX
 *~[0-9]*
 
-# auto folder when using emacs and auctex 
+# auto folder when using emacs and auctex
 /auto/*

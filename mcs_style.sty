@@ -54,7 +54,7 @@
 \tcolorbox[%
     /tcb/sharp corners=all,
     arc=0mm,%
-    % noparskip,
+    noparskip,
     breakable,
     colback=BlockBackground,%
     colframe=Header,%
@@ -106,23 +106,23 @@
 \usepackage{tabularx}
 \usepackage{colortbl}
 \usepackage{menukeys}
-\setlength{\tabcolsep}{10pt}      % Separation between columns in the tables
+\setlength{\tabcolsep}{9pt}      % Separation between columns in the tables
 \setlength{\arrayrulewidth}{2pt}  % Width of the rules for the tables
 
 \newenvironment{fancytable}[1]
-{\def\arraystretch{1.3}
+{\def\arraystretch{1.1}
 \tabularx{0.46\textwidth}{lX}
 \rowcolor{Header}
-\multicolumn{2}{l}{\textcolor{white}{\large\bfseries \Gape[1mm][1mm]{#1}}}\\}
+\multicolumn{2}{l}{\textcolor{white}{\Gape[1mm][1mm]{\large\bfseries{#1}}}}\\}
 {\endtabularx}
 
 \newenvironment{fancytableM}[1]
 {
 \def\arraystretch{1.3}
-\tabularx{0.49\textwidth}{llX}
+\tabularx{0.46\textwidth}{llX}
 \rowcolor{Header}
-\multicolumn{3}{l}{\textcolor{white}{\large\bfseries \Gape[1mm][1mm]{#1}}}\\
-{\large \Gape[1mm][1mm] Win} & {\large  \Gape[1mm][1mm] Mac} & info \\
+\multicolumn{3}{l}{\textcolor{white}{\large\bfseries{#1}}}\\
+{\large Win} & {\large Mac} & {\large description} \\
 }
 {\endtabularx}
 
