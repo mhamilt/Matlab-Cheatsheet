@@ -150,6 +150,7 @@
             \texttt{pi} & $\pi = 3.141592653589793$\\
             \texttt{NaN} & Not a number (i.e. $0/0$)\\
             \texttt{Inf} & Infinity\\
+            \texttt{eps} & relative floating-point precision \\
             \texttt{realmax} & Largest positive floating-point number $1.7977 \cdot 10^{308}$\\
             \texttt{realmin} & Smallest positive floating-point number $2.2251 \cdot 10^{-308}$\\ \chline{Header}
         \end{fancytable}
@@ -186,8 +187,8 @@
        % Linear algebra
        % -------------------------------------------------------
        \begin{fancytable}{Linear algebra}
-           \texttt{x = A\textbackslash b} & Solves \texttt{Ax = b}\\
-           \texttt{x = linsolve(A,B)} & Solves \texttt{A*X = B}\\
+           \texttt{x = A\textbackslash b} & Solves \texttt{A * x = b}\\
+           \texttt{x = linsolve(A,B)} & Solves \texttt{A * x = B}\\
            \texttt{[V,D] = eig(A,B)} & Diagonal matrix \texttt{D} of eigenvalues and matrix \texttt{V} whose columns are the corresponding right eigenvectors, so that \texttt{A*V = V*D}.\\
            \texttt{[U,S,V] = svd(A)} & Singular value decomposition of matrix \(A\), such that $A = U*S*V'$.\\
            \texttt{inv} & Matrix inverse\\
