@@ -87,7 +87,8 @@
             \verb + A .^ 3+ & Every element of \(A\) to the third power\\
             \texttt{cos(A)} & Compute the cosine of every element of \(A\)\\
             \texttt{abs(A)} & Compute the absolute values of every element of \(A\)\\
-            \texttt{A'} & Transpose of \(A\)\\
+            \texttt{A.'} & Transpose of \(A\)\\
+            \texttt{A'} & Hermitian Transpose of \(A\)\\
             \texttt{inv(A)} & Compute the inverse of \(A\)\\
             \texttt{det(A)} & Compute the determinant of \(A\)\\
             \texttt{eig(A)} & Compute the eigenvalues of \(A\)\\
@@ -174,7 +175,6 @@
         \begin{fancytable}{Matrix and array commands}
             \texttt{repelem} & Repeat copies of array elements\\
             \texttt{repmat} & Repeat copies of array\\
-            \texttt{repmat} & Repeat copies of array\\
             \texttt{length} & Length of largest array dimension\\
             \texttt{sort} & sort array elements\\
             \texttt{flip} & flip order of elements\\
@@ -190,9 +190,7 @@
            \texttt{x = A\textbackslash b} & Solves \texttt{A * x = b}\\
            \texttt{x = linsolve(A,B)} & Solves \texttt{A * x = B}\\
            \texttt{[V,D] = eig(A,B)} & Diagonal matrix \texttt{D} of eigenvalues and matrix \texttt{V} whose columns are the corresponding right eigenvectors, so that \texttt{A*V = V*D}.\\
-           \texttt{[U,S,V] = svd(A)} & Singular value decomposition of matrix \(A\), such that $A = U*S*V'$.\\
-           \texttt{inv} & Matrix inverse\\
-           \texttt{realmin} & Smallest positive floating-point number $2.2251 \cdot 10^{-308}$\\ \chline{Header}
+           \texttt{[U,S,V] = svd(A)} & Singular value decomposition of matrix \(A\), such that $A = U*S*V'$.\\           
        \end{fancytable}
 
     \end{multicols}
